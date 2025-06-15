@@ -65,15 +65,19 @@ def get_numerical_phrases(sentence):
    
     grammar = r"""
     CurrencyPhrase: {<\$><CD>}
-    NumericalPhrase: {<RB|RBR|RBS>*<IN>*<CD><NN|NNS>?}
+    NumericalPhrase: {<NN|NNS>?<RB>?<JJR><IN><CD><NN|NNS>?<JJ><NNS>?}
     NumericalPhrase: {<CD><NN|NNS>?}
     """
-
+    sent_pos = nltk.pos_tag(sentence.split())
+    print(sent_pos)
+    representation = {'JJR':'','JJS':'','VBZ':'','RB':'','VBP':'','RBR':''}
     # Criação do parser com a gramática
     parser = nltk.RegexpParser(grammar)
     tree = parser.parse(tagged)
-
     phrases = []
+    for values in sent_pos:
+        if values[1] in representation:
+            phrases.append(f"relation: ({values[0]}),")
     # Percorre as subárvores capturando os padrões definidos.
     for subtree in tree.subtrees():
         label = subtree.label()
@@ -95,7 +99,7 @@ def get_numerical_phrases(sentence):
         elif label == 'NumericalPhrase':
             numeric_value, unit = None, None
             for i, (token, tag) in enumerate(leaves):
-                if tag == "CD":
+                if tag == "CD" or tag =='JJ':
                     numeric_value = token
                     # Se houver um próximo token e for um substantivo, define-o como unidade
                     if i + 1 < len(leaves):
@@ -115,13 +119,11 @@ def get_numerical_phrases(sentence):
 
 # Exemplos de uso
 sentences = [
-    "I have more than 5 books.",
-    "The price is less than $10.",
-    "The temperature is exactly 25 degrees.",
-    "He has at least 3 apples.",
-    "She has 2 cats and 3 dogs."
+   "... greater than $10 ... ",
+"... weight not more than 200lbs ...",
+"... height in 5-7 feets ...",
+"... faster than 30 seconds ... "
 ]
-
 for s in sentences:
     print(f"Sentença: {s}")
     print(f"Extração: {get_numerical_phrases(s)}\n")
