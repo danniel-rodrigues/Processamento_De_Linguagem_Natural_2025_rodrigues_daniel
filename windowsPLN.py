@@ -65,8 +65,9 @@ def get_numerical_phrases(sentence):
    
     grammar = r"""
     CurrencyPhrase: {<\$><CD>}
-    NumericalPhrase: {<NN|NNS>?<RB>?<JJR><IN><CD><NN|NNS>?<JJ><NNS>?}
+    NumericalPhrase: {<NN|NNS>?<RB>?<JJR><IN><CD><NN|NNS>?}
     NumericalPhrase: {<CD><NN|NNS>?}
+    NumericalPhrase: {<NN>?<IN>?<JJ><NNS>?}
     """
     sent_pos = nltk.pos_tag(sentence.split())
     print(sent_pos)
