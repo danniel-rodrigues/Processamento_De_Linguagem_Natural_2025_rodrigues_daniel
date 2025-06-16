@@ -1,20 +1,20 @@
 import nltk
 import re
-# import os
+import os
 
 
-# # Caminho onde você quer salvar os dados NLTK (por exemplo, dentro do seu projeto)
-# nltk_data_path = os.path.join(os.path.dirname(__file__), 'venv', 'nltk_data')
+# Caminho onde você quer salvar os dados NLTK (por exemplo, dentro do seu projeto)
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'venv', 'nltk_data')
 
-# # Cria o diretório, se não existir
-# os.makedirs(nltk_data_path, exist_ok=True)
+# Cria o diretório, se não existir
+os.makedirs(nltk_data_path, exist_ok=True)
 
-# # Adiciona esse caminho à lista de onde o NLTK procura os dados
-# nltk.data.path.append(nltk_data_path)
+# Adiciona esse caminho à lista de onde o NLTK procura os dados
+nltk.data.path.append(nltk_data_path)
 
-# # Baixa os pacotes necessários para esse caminho
-# nltk.download('punkt_tab', download_dir=nltk_data_path)
-# nltk.download('averaged_perceptron_tagger', download_dir=nltk_data_path)
+# Baixa os pacotes necessários para esse caminho
+nltk.download('punkt_tab', download_dir=nltk_data_path)
+nltk.download('averaged_perceptron_tagger', download_dir=nltk_data_path)
 
 
 # Dicionário de símbolos e nomes de unidades/moedas
