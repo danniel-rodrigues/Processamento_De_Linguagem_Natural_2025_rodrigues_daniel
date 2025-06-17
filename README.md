@@ -23,7 +23,11 @@ alterando alguns fatores, como a formação das frases de acordo com o nltk e qu
 Após os ajustes terem sido realizados, todas as alterações foram disponibilizadas neste repositório do GitHub.
 
 **Link do problema encontrado no Stack Overflow:**
-[How to extract numbers (along with comparison adjectives or ranges)](https://stackoverflow.com/questions/45126071/how-to-extract-numbers-along-with-comparison-adjectives-or-ranges)
+[How to extract numbers (along with comparison adjectives or ranges](https://stackoverflow.com/questions/45126071/how-to-extract-numbers-along-with-comparison-adjectives-or-ranges)
+
+**Link do video:**
+[Apresentação](https://drive.google.com/drive/folders/13qqG5aFc7O6phx9YNmZ-q2EJoQb2Oqi2?usp=drive_link)
+
 
 ### **Passo a passo: Criação de ambiente virtual Python**
 
