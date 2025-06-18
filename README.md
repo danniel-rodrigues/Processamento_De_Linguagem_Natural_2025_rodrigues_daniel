@@ -5,7 +5,34 @@
 #### - Almir Vinícius  
 #### - Daniel Santos  
 #### - José Clenildo
+---
+## Divisão de tarefas entre os integrantes
 
+Abaixo está especificado as tarefas que cada integrante da equipe ficou responsável. Foi feita a busca de perguntas
+no Stack Overflow sobre Tokenização, Lematização, Stemming e Expressões Regulares.
+
+Ao final, cada integrante apresentou uma pergunta encontrada sobre o tema que ficou responsável e foi dicutido
+qual seria a pergunta que seria abordada na atividade de Processamento de Linguagem Natural.
+
+**Allan Cristiano**
+- Buscou por perguntas sobre o tema de Lematização.
+- Através da pergunta, gerou os códigos iniciais tanto do problema como da resposta aceita.
+- Colaborou na criação do documento do tutorial.
+ 
+**Almir Vinícius**
+- Buscou por perguntas sobre o tema Stemming.
+- Adaptou o código base sobre a pergunta escolhida para a atividade.
+- Criou o documento do tutorial.
+
+**Daniel Santos**
+- Buscou por peguntas sobre o tema Tokenização.
+- Adaptou o código base, criou o documento do tutorial e organizou as informações no README.md do repositório do GitHub.
+- Colaboração na melhora da identificação das unidades de medida e dos adjetivos de comparação.
+  
+**José Clenildo**
+- Buscou por perguntas sobre o tema de Expressões regulares.
+- Adaptou a resposta aceita permitindo a melhor identificação das unidades de medida e os adjetivos de comparação.
+- Colaborou na criação do documento do tutorial.
 ---
 
 ### **Escolha do problema**
